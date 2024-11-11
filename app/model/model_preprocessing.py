@@ -10,4 +10,4 @@ X, y = data.data, data.target
 model = RandomForestClassifier()
 model.fit(X, y)
 
-joblib.dump(model, "app/backend/model.joblib")
+joblib.dump(model, "../backend/model.joblib")

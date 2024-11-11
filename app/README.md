@@ -1,1 +1,0 @@
-# guild-docker-presentation
