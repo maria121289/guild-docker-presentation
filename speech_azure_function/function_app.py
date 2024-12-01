@@ -4,7 +4,6 @@ import tempfile
 import uuid
 
 import azure.functions as func
-
 from azure_speech import AzureSpeechServiceTranscription
 from language import speech_language_detection_once_from_file
 from utils import convert_mp3_to_wav_subprocess
@@ -58,3 +57,4 @@ def blob_trigger(myblob: func.InputStream):
 
     logging.info("Going to transcribe with Speech Service with continous LID")
     transcript = service.transcribe(filepath_wav, language=detected_language)
+    logging.info(f"Transcription: {transcript}")

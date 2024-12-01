@@ -7,6 +7,11 @@ ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
 ENV FUNCTIONS_WORKER_RUNTIME=python
 ENV AzureWebJobsFeatureFlags=EnableWorkerIndexing
 
+ENV AzureWebJobsStorage=
+ENV BLOB_CONNECTION_STRING=
+ENV AZURE_SPEECH_KEY=
+ENV AZURE_SPEECH_REGION=
+
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y ffmpeg
 # RUN apt-get install -y dnsutils
